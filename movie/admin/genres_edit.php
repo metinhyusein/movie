@@ -43,7 +43,6 @@ if (isset($_POST['submit'])) {
             `modified` = NOW()
             WHERE `id` = '".mysqli_real_escape_string($conn, $id)."'
     ";
-    p($sql);
     
     if (mysqli_query($conn, $sql)) {
       echo 'Successfully added';

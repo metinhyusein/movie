@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
     $fileType = mime_content_type($_FILES['images']['tmp_name']);
     $quality = isset($_POST['quality']) ? trim($_POST['quality']) : '';
     $rating = isset($_POST['rating']) ? (int)($_POST['rating']) : 0;
-    p($quality);
+    
     if ($name) {
         $sql = "SELECT
             `id`,
@@ -183,6 +183,7 @@ if (isset($_POST['submit'])) {
         <span >Min</span>
         <br>
         <br>
+        <label for="images">Image</label>
         <input type="file" name="images">
         <br>
         <br>
